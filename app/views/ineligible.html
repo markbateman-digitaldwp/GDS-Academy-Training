@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/juggling-balls">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        You're ineligible for a juggling licence
+      </h1>
+
+      <p>Unfortunately you're ineligible to apply for a juggling licence as you're unable to juggle 3 balls.</p>
+
+      <p><a href="/start">Head back to the start page</a>.</p>
+
+    </div>
+  </div>
+
+{% endblock %}
