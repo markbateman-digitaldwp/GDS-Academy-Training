@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/juggling-balls">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/juggling-balls-answer" method="post">
+
+      <div class="govuk-form-group">
+
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              So, you can only juggle 1 or 2 balls?
+            </h1>
+          </legend>
+          <span id="waste-hint" class="govuk-hint">
+            Select all that apply.
+          </span>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Waste from animal carcasses
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Waste from mines or quarries
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Farm or agricultural waste
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

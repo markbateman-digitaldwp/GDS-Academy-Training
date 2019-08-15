@@ -10,6 +10,10 @@ router.post('/juggling-balls-answer', function (req, res) {
     // Send user to next page
     res.redirect('/juggling-trick')
   }
+  else if (jugglingBalls == "1 or 2") {
+    // Send user to ineligible page
+    res.redirect('/one-or-two-balls')
+  }
   else {
     // Send user to ineligible page
     res.redirect('/ineligible')
